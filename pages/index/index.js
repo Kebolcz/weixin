@@ -11,16 +11,9 @@ Page({
     userInfo: {},
     name: helloData.name
   },
-  changeName: function(e) {
-    // sent data change to view
-    this.setData({
-      name: 'MINA'
-    })
-  },
-  //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function(){
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../details/details'
     })
   },
   onLoad: function () {

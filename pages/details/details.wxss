@@ -1,0 +1,8 @@
+.details-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.details-item {
+  margin: 10rpx;
+}

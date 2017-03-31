@@ -1,0 +1,39 @@
+button[size="normal"]{
+    display:inline-block;
+    line-height:2.3;
+    font-size:16px;
+    padding:0 1.34em;
+}
+input{
+    direction:rtl;
+    text-align:right;
+}
+label{
+    width:6rem;
+}
+
+.wrap{
+    box-shadow: 0 0 1px 1px #55A0BB;
+}
+.btns button:first-child{
+    margin-left:0;
+    margin-right:2rem;
+}
+.btns button:last-child{
+    margin:0;
+}
+.yzm image,.yzm view{
+    width:8rem;
+    height:4rem;
+}
+.yzm image{
+    margin-left:2rem;
+}
+.fontTM{
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica;
+}
+.justify-rtl {
+    direction:rtl;
+    text-align:right;
+}

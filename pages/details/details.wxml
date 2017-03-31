@@ -1,0 +1,8 @@
+<view class="container details-list">
+    <text class="details-item">nickName: {{nickName}}</text>
+    <text class="details-item">avatarUrl: {{avatarUrl}}</text>
+    <text class="details-item">gender: {{gender}}</text>
+    <text class="details-item">province: {{province}}</text>
+    <text class="details-item">city: {{city}}</text>
+    <text class="details-item">country: {{country}}</text>
+</view>

@@ -8,3 +8,61 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.boxCenter {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+
+.flexCenter {
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+}
+
+.blockUI {
+  margin : 20rpx 0;
+}
+
+.ub {
+    display: -webkit-box !important;
+    display: box !important;
+    position: relative;
+}
+
+.ub-f1 {
+  position: relative;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.ub-f2 {
+  position: relative;
+  -webkit-box-flex: 2;
+  box-flex: 2;
+}
+
+.lineTM {
+  height:1.4rem;
+  line-height:1.4rem;
+  display:inline-block;
+  font-weight:bold;
+}
+
+.lineTM_con {
+  height:1.4rem;
+  line-height:1.4rem;
+  display:inline-block;
+}
+
+.section {
+  padding:0.8rem 1rem;
+}
+
+.justify {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  text-align-last: justify;
+  -moz-text-align-last: justify;
+  -webkit-text-align-last: justify;
+}

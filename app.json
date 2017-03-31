@@ -1,13 +1,16 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs"
+        "pages/logs/logs",
+        "pages/details/details",
+        "pages/invoiceCheck/invoiceCheck"
     ],
     "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "墨鱼仔kebo",
-        "navigationBarTextStyle": "black"
+        "backgroundColor":"#fff",
+        "navigationBarBackgroundColor":"#000",
+        "navigationBarTextStyle":"white",
+        "enablePullDownRefresh":"true"
     },
     "tabBar": {
         "color": "#272636",
@@ -24,6 +27,11 @@
             "text": "日志",
             "iconPath": "images/tabBar/list.png",
             "selectedIconPath": "images/tabBar/list_hl.png"
+        }, {
+            "pagePath": "pages/invoiceCheck/invoiceCheck",
+            "text": "发票校验",
+            "iconPath": "images/icon/invoiceb.png",
+            "selectedIconPath": "images/icon/invoiceg.png"
         }]
     },
     "networkTimeout": {

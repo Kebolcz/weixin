@@ -1,0 +1,37 @@
+<view class="boxCenter blockUI">
+  <button type="primary" size="default" bindtap="scan"> 扫描发票二维码 </button>
+</view>
+<view class="wrap">
+  <view class="section ub">
+    <label for="fpdm" class="ub-f1 lineTM justify">发票代码:</label>
+    <input id="fpdm" value="{{fpdm}}" placeholder="请输入发票代码" class="ub-f1" bindinput="dmChange" bindblur="dmChange" />
+  </view>
+  <view class="section ub">
+    <label for="fphm" class="ub-f1 lineTM justify">发票号码:</label>
+    <input id="fphm" value="{{fphm}}" placeholder="请输入发票号码" class="ub-f1" />
+  </view>
+  <view class="section ub">
+    <label class="ub-f1 lineTM justify">开票日期:</label>
+    <picker mode="date" class="ub-f1 justify-rtl" value="{{fprq}}" end="{{nowDate}}" bindchange="dataTap">
+        <view class="picker lineTM_con">
+            {{fprq}}
+        </view>
+    </picker>
+  </view>
+  <view class="section ub">
+    <label for="kjje" class="ub-f1 lineTM justify">开具金额:</label>
+    <input id="kjje" value="{{kjje}}" placeholder="开具金额-不含税" class="ub-f1" />
+  </view>
+  <view class="section ub">
+    <label for="yzm" class="ub-f1 lineTM justify">验证码:</label>
+    <input id="yzm" placeholder="请输入验证码" class="ub-f1" />
+  </view>
+  <view class="section yzm ub">
+    <image src="{{yzmurl ? yzmurl : '../../images/imgs/code.png'}}" class="ub-f1" mode="scaleToFill" binderror="" bindload=""></image>
+    <view class="ub-f1 flexCenter fontTM">{{tips ? tips : '点击刷新验证码'}}</view>
+  </view>
+</view>
+<view class="btns section ub">
+    <button type="primary" size="default" bindtap="check" class="ub-f1"> 查验 </button>
+    <button type="warn" size="default" bindtap="reset" class="ub-f1"> 重置 </button>
+</view>
