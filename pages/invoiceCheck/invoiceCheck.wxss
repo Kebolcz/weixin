@@ -37,3 +37,18 @@ label{
     direction:rtl;
     text-align:right;
 }
+.yellowTips{
+    background: #C0C0C0;
+    color: rgb(255, 255, 0);
+    font-size: large;
+}
+.blueTips{
+    background: #C0C0C0;
+    color: rgb(0, 0, 255);
+    font-size: large;
+}
+.redTips{
+    background: #C0C0C0;
+    color: rgb(255, 0, 0);
+    font-size: large;
+}

@@ -1,9 +1,10 @@
 var util = require('../../utils/util.js');
 var validate = require('../../utils/validate.js');
 var request = require('../../utils/request.js');
+var inputContent = {}
 Page({
     data: {
-
+        inputContent: {}
     },
     onLoad: function () {
         this.setData({
@@ -32,6 +33,11 @@ Page({
                     fprq: fprq,
                     kjje: kjje
                 });
+                inputContent['fpdm'] = strs[2];
+                inputContent['fphm'] = strs[3];
+                inputContent['fprq'] = fprq;
+                inputContent['kjje'] = kjje;
+
                 var swjginfo = validate.getSwjg(strs[2], 0);
                 var ip = swjginfo[1];
                 var url = ip.replace('https://','') + "/yzmQuery";
@@ -40,15 +46,24 @@ Page({
         })
     },
     dmChange: function (e) {
+        inputContent['fpdm'] = e.detail.value;
         var swjginfo = validate.getSwjg(e.detail.value, 0);
         var ip = swjginfo[1];
         var url = ip.replace('https://','') + "/yzmQuery";
         request.getyzm(this,url,e.detail.value);
     },
     dataTap: function (e) {
+        inputContent['fprq'] = e.detail.value;
         this.setData({
             fprq: e.detail.value
         })
+    },
+    refreshYzm: function(e){
+        var fpdm = inputContent['fpdm'];
+        var swjginfo = validate.getSwjg(fpdm, 0);
+        var ip = swjginfo[1];
+        var url = ip.replace('https://','') + "/yzmQuery";
+        request.getyzm(this,url,fpdm);
     },
     bindButtonTap: function () {
         this.setData({

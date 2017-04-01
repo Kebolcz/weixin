@@ -24,15 +24,18 @@ function getyzm(obj, url, fpdm) {
                 });
             } else if (resJSON.key4 == '01') {
                 that.setData({
-                    tips: "请输入验证码图片中红色文字"
+                    tips: "请输入红色文字",
+                    tipStyle: "redTips"
                 });
             } else if (resJSON.key4 == '02') {
                 that.setData({
-                    tips: "请输入验证码图片中黄色文字"
+                    tips: "请输入黄色文字",
+                    tipStyle: "yellowTips"
                 });
             } else if (resJSON.key4 == '03') {
                 that.setData({
-                    tips: "请输入验证码图片中蓝色文字"
+                    tips: "请输入蓝色文字",
+                    tipStyle: "blueTips"
                 });
             }
         },

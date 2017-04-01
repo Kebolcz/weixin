@@ -4,7 +4,7 @@
 <view class="wrap">
   <view class="section ub">
     <label for="fpdm" class="ub-f1 lineTM justify">发票代码:</label>
-    <input id="fpdm" value="{{fpdm}}" placeholder="请输入发票代码" class="ub-f1" bindinput="dmChange" bindblur="dmChange" />
+    <input id="fpdm" data-id="fpdm" value="{{fpdm}}" placeholder="请输入发票代码" class="ub-f1" bindinput="dmChange" bindblur="dmChange" />
   </view>
   <view class="section ub">
     <label for="fphm" class="ub-f1 lineTM justify">发票号码:</label>
@@ -27,8 +27,8 @@
     <input id="yzm" placeholder="请输入验证码" class="ub-f1" />
   </view>
   <view class="section yzm ub">
-    <image src="{{yzmurl ? yzmurl : '../../images/imgs/code.png'}}" class="ub-f1" mode="scaleToFill" binderror="" bindload=""></image>
-    <view class="ub-f1 flexCenter fontTM">{{tips ? tips : '点击刷新验证码'}}</view>
+    <image src="{{yzmurl ? yzmurl : '../../images/imgs/code.png'}}" class="ub-f1" mode="scaleToFill" bindtap="refreshYzm"></image>
+    <view class="ub-f1 flexCenter fontTM {{tipStyle}}">{{tips ? tips : '点击刷新验证码'}}</view>
   </view>
 </view>
 <view class="btns section ub">
